@@ -3,4 +3,4 @@
 import subprocess
 import lyricTerminal
 
-subprocess.popen(['cmd .lyricTerminal.py'])
+subprocess.popen(['cmd .lyricCode.py'])
