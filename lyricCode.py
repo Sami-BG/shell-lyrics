@@ -10,7 +10,6 @@ import spotipy.util as util
 
 #GENIUS_CLIENT_ID = 'hOWGPvlo2PW8B9kxMjoO_iPdKOoDf4ezKquD4nuByUwLf5QB6LvcryU7O-W72Rkt'
 #GENIUS_CLIENT_SECRET = genius_secret
-#Special thanks to Will Soares: https://github.com/willamesoares/lyrics-crawler
 
 #browses Genius' database and finds the URL of the lyrics page for song_title, artist_name
 def geniusLyrics(song_title, artist_name):
