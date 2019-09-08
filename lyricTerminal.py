@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import spotipy.util as util
 
 #GENIUS_CLIENT_ID = 'hOWGPvlo2PW8B9kxMjoO_iPdKOoDf4ezKquD4nuByUwLf5QB6LvcryU7O-W72Rkt'
-#GENIUS_CLIENT_SECRET = 'wKiTbWyGDR33VsU1QvHwmWRzGDbZgZr6Ac2x3afTyn1aT90jJHuoKzZRxtyj35lVHFpxcFC9-F_XwAGaO3S1KQ'
+#GENIUS_CLIENT_SECRET = genius_secret
 #thanks to https://dev.to/willamesoares/how-to-integrate-spotify-and-genius-api-to-easily-crawl-song-lyrics-with-python-4o62
 
 #browses Genius' database and finds the URL of the lyrics page for song_title, artist_name
@@ -35,7 +35,6 @@ def geniusLyrics(song_title, artist_name):
 
 #scraps the lyrics page on the Genius site for the lyrics and prints
 def scrapSongLyrics(url):
-    global lyrics
     page = requests.get(url)
     html = BeautifulSoup(page.text, 'html.parser')
     lyrics = html.find('div', class_='lyrics').get_text()
@@ -58,7 +57,7 @@ def tracksEqual(trackA, trackB):
 
 
 SPOTIPY_CLIENT_ID = '8be03ebe381c49f6a5f678e50dc906bc'
-SPOTIPY_CLIENT_SECRET = 'ad55cabdbb124831a25074541287d818'
+SPOTIPY_CLIENT_SECRET = spotify_secret
 SPOTIPY_REDIRECT_URI = 'http://google.com/'
 
 scope = 'user-read-currently-playing'
@@ -113,8 +112,7 @@ def masterLoop():
               print(getTrackName(currentTrack) + " by " + getArtistName(currentTrack))
               geniusLyrics(trackName, trackArtist)
               print("^ are lyrics for " + getTrackName(currentTrack) + " by " + getArtistName(currentTrack))
-              print("Click Ctrl+C to quit.")
+              print("Press Ctrl+C to quit.")
 
 
 masterLoop()
-input()
