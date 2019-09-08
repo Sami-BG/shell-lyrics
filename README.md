@@ -7,5 +7,5 @@ will be redirected to a webpage, and you will then be asked to paste the URL of 
 Once that's done, the program should begin displaying the lyrics of the track you're currently playing on your Spotify account,
 provided it can find the lyrics on the Genius database.
 
-Might not work as intended if there is another song with the same name.
+Might not work as intended if there is another track with the same name.
 
