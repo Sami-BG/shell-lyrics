@@ -1,4 +1,4 @@
-# spotify-lyrics
+# shell-lyrics
 A text-based app that automatically searches for and displays the lyrics of the Spotify track you're currently listening to.
 
 Running the executable will open a new tab in your webbrowser that will prompt you to log in to Spotify. Once logged, in you
